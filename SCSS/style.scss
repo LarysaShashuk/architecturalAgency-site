@@ -1,0 +1,19 @@
+@import "reset";
+@import "responsive";
+@import "variables";
+@import "mixins";
+@import "icons";
+@import "fonts";
+@import "general";
+@import "header-slider";
+@import "header-page";
+@import "burger-menu";
+@import "products-page";
+@import "news-slider";
+@import "news-page";
+@import "gallery-page";
+@import "contact-page";
+
+.hiddenElement {
+  display: none;
+}

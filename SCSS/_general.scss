@@ -1,0 +1,81 @@
+.main-container {
+  width: calc((1170 / 1600) * 100%);
+  margin: 0 auto;
+  position: relative;
+
+  @include laptop {
+    width: 80%;
+  }
+
+  @include mobile-w {
+    width: 80%;
+  }
+
+  @include mobile {
+    width: 80%;
+  }
+}
+
+.logo {
+  font-size: 54px;
+  color: $colorWhite;
+
+  @include laptop {
+    font-size: 50px;
+  }
+}
+
+.social-links {
+  width: 161px;
+  @include flex(row, center, space-between);
+
+  &--header {
+    @include laptop {
+      width: 135px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile-w {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--footer {
+    @include mobile-w {
+      margin-top: 50px;
+    }
+
+    @include mobile {
+      margin-top: 50px;
+    }
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $ColorWhiteOpas;
+    border-radius: 50%;
+    @include flex(row, center, center);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $colorWhite;
+    }
+
+    &:hover .social-links__item__icon {
+      color: $mainPurple;
+    }
+
+    &__icon {
+      color: $colorWhite;
+    }
+  }
+}

@@ -1,0 +1,386 @@
+.contact-page {
+  width: 100vw;
+  height: 1224px;
+  @include flex(column, center, flex-start);
+
+  @include mobile-w {
+    height: 1520px;
+  }
+
+  @include mobile {
+    height: 1200px;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 700px;
+
+  @include mobile-w {
+    height: 1000px;
+  }
+
+  @include mobile {
+    height: 800px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 525px;
+  background-image: url(../assets/images/bg3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mobile {
+    height: 400px;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: $mainBlue;
+    background: $firstGradient;
+    position: relative;
+    @include flex(column, center, center);
+  }
+
+  &__content {
+    width: 770px;
+    @include flex(row, flex-start, space-between);
+
+    @include tablet {
+      width: 600px;
+      margin-top: 50px;
+    }
+
+    @include mobile-w {
+      width: 100%;
+      @include flex(column, center, space-between);
+    }
+
+    @include mobile {
+      width: 100%;
+      @include flex(column, center, space-between);
+    }
+
+    &__left-block {
+      @include flex(column, flex-start, space-between);
+
+      @include mobile {
+        @include flex(column, center, space-between);
+      }
+    }
+
+    &__logo {
+      margin-bottom: 25px;
+
+      @include mobile-w {
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+
+      @include mobile {
+        margin-top: 100px;
+        margin-bottom: 30px;
+        font-size: 35px;
+      }
+    }
+
+    &__signature {
+      @include flex(row, flex-end, space-between);
+      margin-bottom: 5px;
+      font-family: $gothemBook;
+      font-size: 14px;
+      font-weight: normal;
+      text-align: left;
+      color: $colorWhite;
+
+      @include tablet {
+        @include flex(column, flex-start, space-between);
+      }
+
+      @include mobile-w {
+        @include flex(column, center, space-between);
+      }
+
+      @include mobile {
+        @include flex(column, center, space-between);
+        font-size: 10px;
+      }
+
+      &__text {
+        padding-right: 20px;
+        border-right: 1px solid $colorWhite;
+
+        @include tablet {
+          border: none;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+
+        @include mobile-w {
+          border: none;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+
+        @include mobile {
+          border: none;
+          padding-right: 0;
+          padding-bottom: 10px;
+        }
+      }
+
+      &__auther {
+        padding-left: 20px;
+
+        @include tablet {
+          padding-left: 0;
+        }
+
+        @include mobile-w {
+          padding-left: 0;
+        }
+
+        @include mobile {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.contact-card {
+  width: 770px;
+  height: 450px;
+  box-shadow: 0px -4px 30px 0 rgba(133, 133, 133, 0.2);
+  background: $colorWhite;
+  position: absolute;
+  bottom: 375px;
+  @include flex(column, center, space-between);
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile-w {
+    width: 100%;
+    height: 640px;
+  }
+
+  @include mobile {
+    width: 100%;
+    height: 550px;
+    bottom: 300px;
+  }
+
+  &__pop-up {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+    background-color: white;
+    @include flex(column, center, center);
+    font-family: $gothemBook;
+    font-size: 44px;
+    text-align: center;
+    color: $textColorDark;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 30px;
+    }
+
+    &__info {
+      margin-top: 60px;
+      font-size: 20px;
+      font-weight: normal;
+
+      @include mobile {
+        font-size: 15px;
+        margin: 20px 10px;
+      }
+    }
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: url(../assets/images/bg4.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 113%;
+    opacity: 0.05;
+    z-index: 5;
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-top: 58px;
+    font-family: $gothemBook;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    color: $textColorDark;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+
+    @include laptop {
+      margin: 50px 0;
+    }
+
+    @include tablet {
+      margin: 50px 0;
+    }
+
+    @include mobile-w {
+      margin: 50px 0;
+      font-size: 35px;
+    }
+
+    @include mobile {
+      margin: 50px 0;
+      font-size: 30px;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      border-bottom: 2px solid $textColorDark;
+      width: 100px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wraper {
+    width: 100%;
+    height: 270px;
+    @include flex(row, flex-start, space-between);
+    z-index: 10;
+
+    @include mobile-w {
+      height: 450px;
+      @include flex(column, center, space-between);
+    }
+
+    @include mobile {
+      height: 400px;
+      @include flex(column, center, space-between);
+    }
+  }
+
+  &__left-block {
+    margin-left: 60px;
+    width: 300px;
+    height: 190px;
+    @include flex(column, flex-start, space-between);
+
+    @include mobile-w {
+      margin: 0;
+      width: 90%;
+    }
+
+    @include mobile {
+      width: 90%;
+      height: 150px;
+      margin: 0;
+    }
+
+    &__text {
+      font-family: $gothemBook;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.89;
+      text-align: left;
+      color: $textColorDark;
+
+      @include mobile {
+        font-size: 12px;
+      }
+
+      &__icon {
+        color: $mainPurple;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__form {
+    margin-right: 60px;
+    width: 310px;
+    height: 190px;
+    @include flex(column, center, space-between);
+
+    @include mobile-w {
+      margin: 0;
+      margin-bottom: 20px;
+      width: 90%;
+    }
+
+    @include mobile {
+      margin: 0;
+      margin-bottom: 20px;
+      width: 90%;
+      height: 170px;
+    }
+
+    &__input {
+      width: 100%;
+      height: 40px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $textColorDarkOpas;
+      cursor: pointer;
+      outline: none;
+      font-family: $gothemBook;
+      font-size: 18px;
+      line-height: 1.22;
+      text-align: left;
+      color: $textColorDarkOpas;
+
+      &:hover,
+      &:focus {
+        color: $textColorDark;
+        border-bottom: 1px solid $textColorDark;
+        background: none;
+      }
+
+      @include mobile {
+        font-size: 13px;
+      }
+    }
+
+    &__button {
+      align-self: flex-end;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: $gothemBook;
+      color: $textColorDark;
+      background: none;
+      outline: none;
+      padding: 17px 41px;
+      border: 1px solid $textColorDark;
+
+      &:hover {
+        color: $colorWhite;
+        background-color: $textColorDark;
+      }
+
+      @include mobile-w {
+        align-self: center;
+      }
+
+      @include mobile {
+        align-self: center;
+        padding: 13px 30px;
+      }
+    }
+  }
+}

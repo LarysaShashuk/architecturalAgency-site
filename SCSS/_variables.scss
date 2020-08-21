@@ -1,0 +1,38 @@
+// Fonts
+$openSans: "Open Sans", sans-serif;
+$gotham: "gotham", sans-serif;
+$gothemBook: "gothambook", sans-serif;
+
+// Colors of the gradient for header and footer
+$mainBlue: #55b7ff;
+$mainPurple: #7e5aff;
+$firstGradient: linear-gradient(
+  45deg,
+  rgba(85, 183, 255, 1) 0%,
+  rgba(126, 90, 255, 0.9) 100%
+);
+
+$burgerGradient: linear-gradient(
+  45deg,
+  rgba(85, 183, 255, 0.4) 0%,
+  rgba(126, 90, 255, 0.4) 100%
+);
+
+// Colors of the gradient for news section
+$sliderDarkBlueColor: #3c7fd4;
+$sliderLightBlueColor: #24ccfa;
+
+$newsGradient: linear-gradient(
+  45deg,
+  rgba(60, 127, 212, 0.9) 0%,
+  rgba(36, 204, 250, 1) 100%
+);
+
+// Colors for typography
+$textColorDark: #2c4058;
+$textColorDarkOpas: rgba(44, 64, 88, 0.2);
+$textColorLight: #4b5562;
+
+// Other colors
+$colorWhite: white;
+$ColorWhiteOpas: rgba(255, 255, 255, 0.5);

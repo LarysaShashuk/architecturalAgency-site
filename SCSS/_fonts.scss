@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "gotham";
+  src: url("../assets/fonts/Gotham/Gotham-Medium/GothamMedium.woff2")
+      format("woff2"),
+    url("../assets/fonts/Gotham/Gotham-Medium/GothamMedium.woff") format("woff"),
+    url("../assets/fonts/Gotham/Gotham-Medium/GothamMedium.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gothambook";
+  src: url("../assets/fonts/Gotham/Gotham-Book/GothamBook.woff2")
+      format("woff2"),
+    url("../assets/fonts/Gotham/Gotham-Book/GothamBook.woff") format("woff"),
+    url("../assets/fonts/Gotham/Gotham-Book/GothamBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gotham";
+  src: url("../assets/fonts/Gotham/Gotham-Bold/gothambold1.woff") format("woff"),
+    url("../assets/fonts/Gotham/Gotham-Bold/gothambold1.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.woff")
+      format("woff"),
+    url("../assets/fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.woff2")
+      format("truetype"),
+    url("../assets/fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans/OpenSans-Italic/OpenSans-Italic.woff")
+      format("woff"),
+    url("../assets/fonts/OpenSans/OpenSans-Italic/OpenSans-Italic.woff2")
+      format("truetype"),
+    url("../assets/fonts/OpenSans/OpenSans-Italic/OpenSans-Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

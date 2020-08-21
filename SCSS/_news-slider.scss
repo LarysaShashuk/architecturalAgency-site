@@ -1,0 +1,346 @@
+// slider style
+
+.slider-news {
+  position: relative;
+
+  &__wrap {
+    max-width: 370px;
+    height: 514px;
+    background-color: $colorWhite;
+    @include flex(column, center, flex-start);
+
+    @include mobile {
+      width: 230px;
+      height: 380px;
+    }
+
+    @include mobile-w {
+      width: 340px;
+      height: 500px;
+    }
+  }
+}
+
+.slider-img {
+  position: relative;
+
+  &:hover .slider-img__item {
+    opacity: 0.5;
+  }
+
+  &:hover .slider-img__icon {
+    display: block;
+  }
+
+  &__item {
+    @include mobile {
+      width: 100%;
+    }
+
+    @include mobile-w {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.slider-content {
+  width: 320px;
+  margin-left: 20px;
+  @include flex(column, flex-start, flex-start);
+
+  @include mobile {
+    width: 230px;
+    height: 250px;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  @include mobile-w {
+    width: 340px;
+    height: 360px;
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-family: $gotham;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.55;
+    text-align: left;
+    color: $textColorDark;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    @include mobile {
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    @include mobile-w {
+      font-size: 17px;
+    }
+  }
+
+  &__text {
+    font-family: $openSans;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.67;
+    text-align: left;
+    color: $textColorLight;
+
+    @include mobile {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    @include mobile-w {
+      font-size: 15px;
+      margin-top: 15px;
+    }
+  }
+
+  &__auther {
+    margin-top: 35px;
+    @include flex(row, center, flex-start);
+
+    &__photo {
+      border-radius: 50%;
+      width: 40px;
+    }
+
+    &__info {
+      margin-left: 20px;
+      @include flex(column, flex-start, space-between);
+    }
+
+    &__name {
+      font-family: $gothemBook;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-align: left;
+      color: $textColorDark;
+
+      @include mobile {
+        font-size: 13px;
+      }
+
+      @include mobile-w {
+        font-size: 15px;
+      }
+    }
+
+    &__date {
+      font-family: $gothemBook;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 2;
+      text-align: left;
+      color: $mainBlue;
+
+      @include mobile {
+        font-size: 11px;
+      }
+
+      @include mobile-w {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// slick slider settings
+
+.slider-news__wrap {
+  width: 370px;
+  height: 514px;
+  position: relative;
+
+  @include mobile {
+    width: 230px;
+    height: 380px;
+  }
+
+  @include mobile-w {
+    width: 340px;
+    height: 500px;
+  }
+}
+
+.slider-news .slick-slider {
+  @include flex(column, center, space-between);
+}
+
+.slider-news .slick-slide,
+.slider-news__slide {
+  @include flex(column, center, space-between);
+  height: 514px;
+  background-color: none;
+
+  @include mobile {
+    height: 380px;
+  }
+
+  @include mobile-w {
+    height: 500px;
+  }
+}
+
+// arrows settings
+
+.slider-news .slick-arrow {
+  position: absolute;
+  top: 38%;
+  z-index: 200;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.slider-news .slick-arrow.slick-prev {
+  left: -106px;
+  background-image: url(../assets/icons/prev.svg);
+
+  @include laptop {
+    left: -60px;
+  }
+
+  @include tablet {
+    left: -60px;
+  }
+
+  @include mobile-w {
+    left: -30px;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+
+  @include mobile {
+    left: -15px;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+}
+
+.slider-news .slick-arrow.slick-next {
+  right: -106px;
+  background-image: url(../assets/icons/next.svg);
+
+  @include laptop {
+    right: -60px;
+  }
+
+  @include tablet {
+    right: -60px;
+  }
+
+  @include mobile-w {
+    right: -30px;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+
+  @include mobile {
+    right: -15px;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+}
+
+// dots settings
+
+.slider-news .slick-dots {
+  margin-top: 38px;
+  outline: none;
+  @include flex(row, center, center);
+
+  @include mobile {
+    margin: 0;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+    @include flex(row, center, center);
+    right: initial;
+    margin-left: 20px;
+  }
+}
+.slider-news .slick-dots li {
+  list-style: none;
+}
+.slider-news .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $colorWhite;
+  background: none;
+  margin: 20px 0;
+  margin-right: 40px;
+
+  @include mobile-w {
+    width: 10px;
+    height: 10px;
+    margin: 20px 0;
+    margin-right: 20px;
+  }
+  @include mobile {
+    width: 7px;
+    height: 7px;
+    margin: 10px 0;
+    margin-right: 15px;
+  }
+}
+
+.slider-news .slick-dots li.slick-active button {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $colorWhite;
+  background-color: $colorWhite;
+  border-radius: 50%;
+
+  &:focus,
+  &:checked {
+    outline: none;
+  }
+}
+
+// slider general settings
+
+.slider-news .slick-list {
+  overflow: hidden;
+  @include flex(row, center, space-between);
+}
+
+.slider-news .slick-list .slick-list * {
+  height: 100%;
+}
+
+.slider-news .slick-track {
+  width: 100%;
+  @include flex(row, center, space-between);
+}
+
+.slider-news .slick-initialized {
+  width: 100%;
+  @include flex(row, center, space-between);
+}

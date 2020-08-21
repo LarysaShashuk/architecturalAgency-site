@@ -1,0 +1,186 @@
+// dots settings
+
+.slider-header .slick-dots {
+  position: absolute;
+  right: 0;
+  outline: none;
+  @include flex(column, center, center);
+
+  @include mobile {
+    text-align: center;
+    align-self: center;
+    padding-bottom: 100px;
+    @include flex(row, center, center);
+    right: initial;
+    margin-left: 20px;
+  }
+}
+.slider-header .slick-dots li {
+  list-style: none;
+}
+.slider-header .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $colorWhite;
+  background: none;
+  margin: 20px 0;
+  margin-right: 40px;
+
+  @include mobile-w {
+    width: 10px;
+    height: 10px;
+    margin: 20px 0;
+    margin-right: 20px;
+  }
+  @include mobile {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+.slider-header .slick-dots li.slick-active button {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $colorWhite;
+  background-color: $colorWhite;
+  border-radius: 50%;
+
+  &:focus,
+  &:checked {
+    outline: none;
+  }
+}
+
+// slide height settings
+
+.slider-header .slick-list {
+  overflow: hidden;
+}
+
+.slider-header .slick-list .slick-list * {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-header .slick-track {
+  @include flex(column, center, center);
+}
+
+// slider styles
+
+.slider-header-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.slider-header {
+  position: relative;
+  @include flex(row, center, space-between);
+
+  @include mobile {
+    @include flex(column-reverse, center, space-between);
+  }
+
+  &__slide {
+    width: 100vw;
+    height: 100vh;
+    font-size: 100px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: start;
+    background-size: cover;
+
+    &__overlay {
+      width: 100vw;
+      height: 100vh;
+      background: $mainBlue;
+      background: $firstGradient;
+      position: absolute;
+      @include flex(column, center, center);
+    }
+    &__content {
+      @include flex(column, center, center);
+    }
+
+    &__title {
+      font-family: $gotham;
+      font-size: 80px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 0.28;
+      letter-spacing: 4px;
+      text-align: center;
+      color: $colorWhite;
+      margin: 0;
+
+      @include tablet {
+        font-size: 55px;
+      }
+
+      @include mobile-w {
+        font-size: 40px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+        line-height: 1;
+      }
+    }
+
+    &__subtitle {
+      font-family: $gothemBook;
+      font-size: 18px;
+      font-weight: normal;
+      letter-spacing: 5.4px;
+      text-align: center;
+      color: $colorWhite;
+      text-transform: uppercase;
+      margin-top: 40px;
+
+      @include tablet {
+        font-size: 15px;
+      }
+
+      @include mobile-w {
+        font-size: 11px;
+      }
+
+      @include mobile {
+        font-size: 10px;
+      }
+    }
+
+    &__scroll {
+      position: absolute;
+      bottom: 50px;
+      cursor: pointer;
+
+      @include mobile {
+        bottom: 15px;
+      }
+
+      &__img {
+        transform: rotate(90deg);
+      }
+    }
+
+    &--2 {
+      background-position: center;
+    }
+
+    &--3 {
+      background-position: center;
+    }
+
+    &--4 {
+      background-position: center;
+    }
+
+    &--5 {
+      background-position: center;
+    }
+  }
+}

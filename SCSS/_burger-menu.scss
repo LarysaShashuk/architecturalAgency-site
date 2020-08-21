@@ -1,0 +1,156 @@
+.burger-menu {
+  height: 29px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 15;
+
+  @include laptop {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &__button-open {
+    width: 100%;
+    height: 100%;
+    @include flex(column, center, space-between);
+    background: none;
+
+    @include mobile {
+      height: 70%;
+    }
+
+    &__line {
+      width: 100%;
+      height: 4px;
+      border-radius: 5px;
+      background-color: $colorWhite;
+
+      @include mobile {
+        height: 2px;
+      }
+    }
+  }
+}
+
+.burger-modal {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  @include flex(row, center, flex-end);
+
+  &__overlay {
+    width: 40%;
+    height: 100%;
+    @include flex(row, center, flex-end);
+    background-image: url(../assets/images/news1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include mobile-w {
+      width: 60%;
+    }
+
+    @include mobile {
+      width: 70%;
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $colorWhite, $alpha: 0.8);
+    @include flex(column, center, flex-start);
+    position: relative;
+
+    &__list {
+      margin-top: 50%;
+      list-style-type: none;
+      width: 70%;
+      height: 30%;
+      @include flex(column, flex-end, space-between);
+
+      &__item {
+        width: 100%;
+        text-align: right;
+        padding-bottom: 5px;
+
+        &:hover {
+          text-align: left;
+          border-bottom: 4px solid $textColorDark;
+        }
+      }
+
+      &__link {
+        width: 100%;
+        font-family: $gotham;
+        font-size: 34px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.55;
+        letter-spacing: normal;
+        text-align: right;
+        color: $textColorLight;
+        text-decoration: none;
+
+        @include mobile {
+          font-size: 20px;
+        }
+
+        &:active {
+          padding: 5px 15px;
+          border: 1px dotted $textColorLight;
+        }
+      }
+    }
+  }
+
+  &__button-close {
+    height: 10px;
+    width: 60px;
+    cursor: pointer;
+    @include flex(column, center, space-around);
+    background: none;
+    top: 30px;
+    right: 10px;
+    position: absolute;
+    opacity: 0.5;
+    outline: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.burger-menu__button-close__line {
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 4px;
+    background-color: black;
+    border-radius: 4px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

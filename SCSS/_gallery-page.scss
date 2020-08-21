@@ -1,0 +1,211 @@
+.gallery-page {
+  width: 100vw;
+  height: 1000px;
+
+  @include laptop {
+    height: 750px;
+  }
+
+  @include tablet {
+    height: 1200px;
+  }
+
+  @include mobile-w {
+    height: 1000px;
+  }
+
+  @include mobile {
+    height: 800px;
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-top: 138px;
+    margin-bottom: 95px;
+    padding-left: 2px;
+    font-family: $gothemBook;
+    font-size: 44px;
+    font-weight: normal;
+    text-align: center;
+    color: $textColorDark;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+
+    @include laptop {
+      margin: 50px 0;
+    }
+
+    @include tablet {
+      margin: 50px 0;
+    }
+
+    @include mobile {
+      margin: 50px 0;
+      font-size: 35px;
+    }
+
+    @include mobile-w {
+      margin: 50px 0;
+      font-size: 30px;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      border-bottom: 2px solid $textColorDark;
+      width: 100px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__photos-block {
+    width: 100%;
+    @include flex(row, center, space-between);
+
+    @include tablet {
+      @include flex(column, center, space-between);
+    }
+
+    @include mobile-w {
+      @include flex(column, center, space-between);
+    }
+
+    @include mobile {
+      @include flex(column, center, space-between);
+    }
+
+    @include desktop {
+      max-width: 1440px;
+    }
+  }
+
+  &__button {
+    margin-top: 55px;
+    font-family: $gothemBook;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 17px 57px;
+    border: 1px solid $textColorLight;
+    background: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: $textColorLight;
+    cursor: pointer;
+
+    &:hover {
+      background: $textColorLight;
+      color: $colorWhite;
+    }
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+}
+
+.left-block {
+  width: calc((580 / 1170) * 100%);
+  position: relative;
+
+  @include tablet {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  @include mobile-w {
+    width: 100%;
+    max-width: 450px;
+    min-width: 410px;
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  &:hover .left-block__img {
+    opacity: 0.5;
+  }
+
+  &:hover .left-block__icon {
+    display: block;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.right-block {
+  width: calc((580 / 1170) * 100%);
+  @include flex(row, flex-start, space-between);
+  flex-wrap: wrap;
+
+  @include tablet {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  @include mobile-w {
+    width: 100%;
+    max-width: 450px;
+    min-width: 410px;
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  &__wrap {
+    width: calc((285 / 580) * 100%);
+    position: relative;
+    @include flex(row, flex-start, flex-start);
+
+    &:hover .right-block__wrap__img {
+      opacity: 0.5;
+    }
+
+    &:hover .right-block__wrap__icon {
+      display: block;
+    }
+
+    &--last {
+      margin-top: calc((10 / 580) * 100%);
+      align-self: flex-end;
+      @include flex(row, flex-end, flex-end);
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    &__img {
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.main-container--gallery {
+  @include flex(column, center, flex-start);
+}
